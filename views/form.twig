@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create new Event</title>
+</head>
+
+<body>
+    <fieldset style="width: 30%; margin: auto;">
+        <legend> Create New Event </legend>
+        <form action="/event/add" method="POST">
+            <div style="margin-bottom: 20px;">
+                <label for="title_input">Title :</label>
+                <input type="text" name="title" id="title_input">
+            </div>
+            <div style="margin-bottom: 20px;">
+                <label for="date_input">Date :</label>
+                <input type="date" name="date" id="date_input">
+            </div>
+            <div style="display: flex;">
+                <div style="margin-left: auto;"></div>
+                <div>
+                    <input type="submit" value="Create" style="background-color: greenyellow;" >
+                </div>
+            </div>
+        </form>
+    </fieldset>
+</body>
+
+</html>

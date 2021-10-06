@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event List</title>
+</head>
+
+<body>
+    <a href="/event/add"> show create event </a>
+    <table border="1">
+        <thead>
+            <th>#</th>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+            {% for event in events %}
+            <tr>
+                <td> # </td>
+                <td> {{ event.title }} </td>
+                <td> {{ event.date }} </td>
+                <td> <button onclick="deleteEvent('{{ event.id }}')" style="background-color: red; border-radius: 30%;">
+                        Delete </button> </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+    <script>
+        function deleteEvent(id) {
+            console.log({ id })
+            $.ajax({
+                url: `/event/delete/${id}`,
+                method: "DELETE",
+                success: function(data){
+                    console.log(data)
+                },
+                error: function(err){
+                    console.warn(err)
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>
