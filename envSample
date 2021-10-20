@@ -1,0 +1,5 @@
+DB_HOST = localhost
+DB_USER = 
+DB_PWD = 
+DB_PORT = 
+DB_NAME = esprit_5sim3
