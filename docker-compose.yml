@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  app_api:
+    image: "my_backend" 
+    build: .
+    ports:
+      - "30030:3000"
+    restart: always
+    depends_on:
+      - database_service
+
+  database_service:
+    image: "mongo"
+    ports: 
+      - "27020:27017"
