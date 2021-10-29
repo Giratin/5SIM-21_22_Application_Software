@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create User</title>
+</head>
+<body>
+    <fieldset style="width: 44%; display: block; margin: auto;">
+        <legend>Create User</legend>
+        <form action="/users/create" method="post" enctype="multipart/form-data">
+            <div style="margin-bottom: 15px;">
+                <input type="text" name="firstName" placeholder="First name">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <input type="text" name="lastName" placeholder="Last name">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <input type="email" name="email" placeholder="Email">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <input type="file" name="avatar" accept="*/image" >
+            </div>
+            <div style="margin-bottom: 15px;">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </fieldset>
+</body>
+</html>
